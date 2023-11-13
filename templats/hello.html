@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    home
+{% endblock %}
+
+{% block content %}
+    <p> {{request.user}} </p>
+    {% for i in p %} 
+        <a href="{% url 'profile' i.id %}"> 
+            <h1> {{i.first_name}} </h1> </a>
+    {% endfor %}
+{% endblock %}

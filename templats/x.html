@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block x %}
+    <h1>
+    {{g.first_name}} 
+    </h1>
+    <h2>
+    {{g.last_name}} 
+    </h2>
+
+<a href="{% url 'delete' g.id %}" class='btn btn-danger'> Delete </a>
+<a href="{% url 'update' g.id %}" class='btn btn-info'> update </a>
+{% endblock %}
